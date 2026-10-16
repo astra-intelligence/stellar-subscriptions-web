@@ -7,9 +7,28 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { WalletProvider } from "@/components/wallet/WalletProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stellar-subscriptions.example.com"),
   title: { default: "Stellar Subscriptions", template: "%s · Stellar Subscriptions" },
   description:
     "Recurring payments on Stellar, on your terms. Authorize a spending cap once, cancel anytime — a merchant can never charge more than you approved.",
+  openGraph: {
+    type: "website",
+    siteName: "Stellar Subscriptions",
+    title: "Stellar Subscriptions",
+    description:
+      "Recurring payments on Stellar, on your terms. Authorize a spending cap once, cancel anytime — a merchant can never charge more than you approved.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Stellar Subscriptions — recurring payments on Stellar, on your terms." }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stellar Subscriptions",
+    description:
+      "Recurring payments on Stellar, on your terms. Authorize a spending cap once, cancel anytime.",
+    images: ["/opengraph-image.png"],
+  },
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
